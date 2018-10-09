@@ -1,0 +1,26 @@
+body {
+	font: 1.5em/1.2 sans-serif;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.spec-container {
+	text-align: center;
+}
+
+
+video {
+	width: 100%;
+	background-color: #999;
+}
+
+.red {
+	background: red;
+}
+
+.yellow {
+	background: yellow;
+}
