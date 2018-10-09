@@ -2,6 +2,12 @@ body {
 	font: 1.5em/1.2 sans-serif;
 }
 
+button {
+	width: 50%;
+	margin: 10px;
+	padding: 10px;
+}
+
 .container{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -11,6 +17,9 @@ body {
 	text-align: center;
 }
 
+.range-container {
+	margin-top: 25px;
+}
 
 video {
 	width: 100%;
@@ -19,8 +28,14 @@ video {
 
 .red {
 	background: red;
+	color: white;
 }
 
 .yellow {
 	background: yellow;
+}
+
+.green {
+	background: green;
+	color: white;
 }

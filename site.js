@@ -1,6 +1,9 @@
+// App Init
 const video = document.getElementById('video');
 const score = document.getElementById('score');
 const body = document.getElementById('body');
+const startBtn = document.getElementById('start-btn');
+const stopBtn = document.getElementById('stop-btn');
 const sound = new Howl({
 	src: ['sound-dog.mp3']
 });
@@ -15,9 +18,17 @@ slider.oninput = function () {
 	sliderValue = this.value;
 }
 
+// Buttons
+startBtn.addEventListener('click', function(){
+	DiffCamEngine.start();
+});
+
+stopBtn.addEventListener('click', function(){
+	DiffCamEngine.stop();
+});
+
 // Diff Cam
 function initSuccess() {
-	DiffCamEngine.start();
 }
 
 function initError(e) {
