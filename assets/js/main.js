@@ -5,6 +5,7 @@ const body = document.getElementById('body');
 const startBtn = document.getElementById('start-btn');
 const stopBtn = document.getElementById('stop-btn');
 const fullscreenBtn = document.getElementById('fullscreen-btn');
+let fullscreen = false;
 const status = document.getElementById('status-detection');
 const sound = new Howl({
 	src: ['assets/sound-dog.mp3']
@@ -32,7 +33,14 @@ stopBtn.addEventListener('click', function() {
 });
 
 fullscreenBtn.addEventListener('click', function() {
-  document.documentElement.webkitRequestFullScreen();
+  fullscreen = !fullscreen;
+  if(fullscreen){
+    fullscreenBtn.textContent = 'Exit Full Screen';
+    document.documentElement.webkitRequestFullScreen();
+	} else{
+    fullscreenBtn.textContent = 'Full Screen';
+    document.webkitExitFullscreen();
+	}
 });
 
 // Diff Cam
