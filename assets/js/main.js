@@ -1,12 +1,10 @@
-// App Configuration
-document.documentElement.webkitRequestFullScreen();
-
 // App Init
 const video = document.getElementById('video');
 const score = document.getElementById('score');
 const body = document.getElementById('body');
 const startBtn = document.getElementById('start-btn');
 const stopBtn = document.getElementById('stop-btn');
+const fullscreenBtn = document.getElementById('fullscreen-btn');
 const status = document.getElementById('status-detection');
 const sound = new Howl({
 	src: ['assets/sound-dog.mp3']
@@ -23,14 +21,18 @@ slider.oninput = function () {
 }
 
 // Buttons
-startBtn.addEventListener('click', function(){
+startBtn.addEventListener('click', function() {
 	DiffCamEngine.start();
   status.innerText = 'Playing';
 });
 
-stopBtn.addEventListener('click', function(){
+stopBtn.addEventListener('click', function() {
 	DiffCamEngine.stop();
   status.innerText = 'Stopping';
+});
+
+fullscreenBtn.addEventListener('click', function() {
+  document.documentElement.webkitRequestFullScreen();
 });
 
 // Diff Cam
