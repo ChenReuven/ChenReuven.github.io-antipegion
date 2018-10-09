@@ -1,6 +1,7 @@
 // App Configuration
-var elem = document.getElementsByTagName("body");
+var elem = document.documentElement;
 
+/* View in fullscreen */
 function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
