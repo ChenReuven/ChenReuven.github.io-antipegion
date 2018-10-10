@@ -8,6 +8,12 @@ button {
 	padding: 10px;
 }
 
+.title{
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+}
+
 .container{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -18,7 +24,15 @@ button {
 }
 
 .range-container {
-	margin-top: 25px;
+	margin: 25px;
+}
+
+.sensitivity{
+	margin-bottom: 15px;
+}
+
+.score {
+	margin-top: 15px;
 }
 
 video {
